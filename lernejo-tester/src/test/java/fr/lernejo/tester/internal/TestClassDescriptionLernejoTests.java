@@ -7,12 +7,12 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.lernejo.tester.api.TestMethod;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Test;
 
 class TestClassDescriptionLernejoTests {
-    @Test
-    void test_class_description_of_SomeLernejoTests_should_produce_ok_and_ko() throws NoSuchMethodException {
+    @TestMethod
+    public void test_class_description_of_SomeLernejoTests_should_produce_ok_and_ko() throws NoSuchMethodException {
         Class<SomeLernejoTests> someLernejoTests = SomeLernejoTests.class;
         TestClassDescription testClassDescription = new TestClassDescription(someLernejoTests);
         List<Method> result = testClassDescription.listTestMethods();
